@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Demo Html</title>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<crowd-form>
+<crowd-classifier name="tweetFeeling" categories="['extreme hate','more hate','hate', 'less hate']" header="Which term best describes this tweet?">
+<classification-target>
+My favorite football team won today!
+Bring on the division finals!
+</classification-target>
+<full-instructions header="Sentiment Analysis Instructions">
+Try to determine the sentiment the author
+of the tweet is trying to express.
+If none seem to match, choose "cannot determine."
+</full-instructions>
+<short-instructions>
+Pick the term best describing the sentiment
+of the tweet.<br><br><strong>VIEWING THIS ON CODEPEN?</strong> click "Change View" to open the editor to view and/or change the code.
+</short-instructions>
+
+</crowd-classifier>
+
+</crowd-form>
+
+</body>
+</html>
