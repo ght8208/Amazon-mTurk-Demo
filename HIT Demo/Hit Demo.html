@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo Page</title>
+
+<!--<script src="crowd-html-elements-uncompress.js"></script>-->
+
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="bootstrap.min.css">
+<style type="text/css">
+.jumbotron{
+  height: 500px;
+  width:100%;
+}
+#altcontainer {
+  background-color:#FFF;
+  font-size:100%;
+  line-height:1.7em;
+}
+/* The radiocontainer */
+.radiocontainer {
+  background-color:#ffffff;
+  display: block;
+  position: relative;
+  padding:10px 10px 10px 50px;
+  margin-bottom: 1px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  word-wrap: break-word;
+}
+
+/* Hide the browser's default radio button */
+.radiocontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 19px;
+  width: 19px;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+.checkedlabel {
+  background-color:#ddd;
+}
+/* On mouse-over, add a grey background color */
+.radiocontainer:hover input ~ .checkmark {
+  /*nothing*/
+}
+.radiocontainer:hover {
+  background-color: #ddd;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiocontainer input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiocontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.radiocontainer .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+.d{
+  font-weight:bold;
+  font-size:30px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-bottom:20px;
+  margin-top:0px;
+}
+.box{
+  margin: 10px;
+}
+.headerp{
+  font-weight:bold;
+  font-size:25px;
+}
+.commenp{
+  font-weight:bold;
+  font-size:20px;
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <div class="d">Project 2</div>      
+    <div class="hit">
+      <div class="box">
+          <div class="header">
+            <div class="headerp">Which term best describes this tweet?</div>
+          </div>
+
+          <div class="panel panel-default" style="max-width: 400px;">
+            <div class="panel-body" >My favorite football team won today! Bring on the division finals! </div>
+          </div>      
+      </div>
+
+      <div class="commenleft">
+        <div class="col-md-3">
+            <div class="commenp">The level of hate</div>
+            <div id="altcontainer">
+              <label class='radiocontainer' id='label2'> Extreme Hate
+                <input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' />
+                <span class='checkmark'></span>
+              </label>
+              <label class='radiocontainer' id='label1'> Normal Hate
+                <input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' />
+                <span class='checkmark'></span>
+              </label>
+              <label class='radiocontainer' id='label1'> Less Hate
+                <input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' />
+                <span class='checkmark'></span>
+              </label>
+              <label class='radiocontainer' id='label1'> No Hate
+                <input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' />
+                <span class='checkmark'></span>
+              </label>
+            </div>
+        </div>
+      </div>
+
+      <div class="commenright">  
+        <div class="col-md-9">
+            <div class="commenp">The level of confidence</div>
+            <div id="altcontainer" class="col-md-5">
+              <label class='radiocontainer' id='label2'> Extreme confident
+                <input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' />
+                <span class='checkmark'></span>
+              </label>
+              <label class='radiocontainer' id='label1'> Normal confident
+                <input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' />
+                <span class='checkmark'></span>
+              </label>
+              <label class='radiocontainer' id='label1'> Less confident
+                <input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' />
+                <span class='checkmark'></span>
+              </label>
+              <label class='radiocontainer' id='label1'> No confidence
+                <input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' />
+                <span class='checkmark'></span>
+              </label>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
