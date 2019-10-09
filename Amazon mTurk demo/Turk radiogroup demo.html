@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RadioGroup Demo Html</title>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<crowd-form>
+	<crowd-radio-group>
+    <div>
+        <crowd-radio-button name="hate" value="Extreme Hate">Extreme Hate</crowd-radio-button>
+    </div>
+    <div>
+        <crowd-radio-button name="hate" value="Normal Hate">Normal Hate</crowd-radio-button>
+    </div>
+    <div>
+        <crowd-radio-button name="hate" value="Less Hate">Less Hate</crowd-radio-button>
+    </div>
+    <div>
+        <crowd-radio-button name="hate" value="No Hate">No Hate</crowd-radio-button>
+    </div>
+	</crowd-radio-group>
+</crowd-form>
+
+</body>
+</html>
