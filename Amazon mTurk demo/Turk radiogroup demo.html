@@ -2,6 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <title>RadioGroup Demo Html</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script>
   window.console = window.console || function(t) {};
 </script>
@@ -13,22 +14,51 @@
 </head>
 <body translate="no">
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
-
+	
 <crowd-form>
-	<crowd-radio-group>
-    <div>
-        <crowd-radio-button name="hate" value="Extreme Hate">Extreme Hate</crowd-radio-button>
-    </div>
-    <div>
-        <crowd-radio-button name="hate" value="Normal Hate">Normal Hate</crowd-radio-button>
-    </div>
-    <div>
-        <crowd-radio-button name="hate" value="Less Hate">Less Hate</crowd-radio-button>
-    </div>
-    <div>
-        <crowd-radio-button name="hate" value="No Hate">No Hate</crowd-radio-button>
-    </div>
+	
+	<div class="row">
+		<div class="col-lg-6">
+			<p><b>Please read the following text and mark how hateful, if at all, it is</b></p>
+			<p>${text}</p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-3">
+			<crowd-radio-group>
+
+        		<crowd-radio-button name="Very Hateful" value="3">Very Hateful</crowd-radio-button>
+       			<crowd-radio-button name="Somewhat Hateful" value="2">Somewhat Hateful</crowd-radio-button>
+        		<crowd-radio-button name="Slightly Hateful" value="1">Slightly Hateful</crowd-radio-button>
+        		<crowd-radio-button name="No Hate Speech" value="0">No Hate Speech</crowd-radio-button>
+
 	</crowd-radio-group>
+			</div>
+		</div>
+	
+	<div class="row">
+		<div class="col-sm-3">
+			<p><b>How confident are you in this answer?</b></p>
+			<crowd-radio-group>
+				
+				<crowd-radio-button name="Very Confident" value="3">Very Confident</crowd-radio-button>
+				<crowd-radio-button name="Somewhat Confident" value="2">Somewhat Confident</crowd-radio-button>
+				<crowd-radio-button name="Slightly Confident" value="1">Slightly Confident</crowd-radio-button>
+				<crowd-radio-button name="Not Very Confident" value="0">Not Very Confident</crowd-radio-button>
+				
+			</crowd-radio-group>
+			</div>
+		</div>
+	
+	<div class="row">
+		<div class="col-lg-6">
+			<crowd-input name = "Justification" required="true" placeholder="Please explain why you think the text does or does not cotain hate speech"></crowd-input>
+		</div>
+	</div>
+	
+	
+	
 </crowd-form>
 
 </body>
